@@ -2,95 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+@import url('https://fonts.googleapis.com/css2?family=Martian+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core palette - warm cream, vermillion red, charcoal */
+    --background: 40 33% 96%;
+    --foreground: 0 0% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 40 33% 96%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 40 33% 96%;
+    --popover-foreground: 0 0% 10%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Warm red/orange - the hero color */
+    --primary: 14 100% 50%;
+    --primary-foreground: 40 33% 96%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 40 15% 88%;
+    --muted-foreground: 0 0% 40%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 340 60% 65%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 40 33% 96%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 40 15% 85%;
+    --input: 40 15% 85%;
+    --ring: 14 100% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0rem;
 
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Custom colors */
+    --sun-core: 14 100% 50%;
+    --sun-glow: 20 100% 55%;
+    --glass: 40 33% 98%;
+    --text-dark: 0 0% 10%;
+    --text-muted: 0 0% 45%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --background: 0 0% 8%;
+    --foreground: 40 33% 96%;
+    --card: 0 0% 10%;
+    --card-foreground: 40 33% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 40 33% 96%;
+    --primary: 14 100% 55%;
+    --primary-foreground: 0 0% 8%;
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 40 33% 96%;
+    --muted: 0 0% 18%;
+    --muted-foreground: 40 20% 70%;
+    --accent: 340 60% 65%;
+    --accent-foreground: 40 33% 96%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 14 100% 55%;
   }
 }
 
@@ -99,7 +72,119 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  html {
+    font-feature-settings: "ss01" on, "ss02" on;
   }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Martian Mono', monospace;
+  }
+}
+
+@layer components {
+  /* Section title with elastic underline */
+  .section-title {
+    @apply relative inline-block cursor-default;
+  }
+
+  .section-title::after {
+    content: '';
+    @apply absolute left-0 bottom-0 w-full h-px bg-foreground;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .section-title:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  /* Tag styling */
+  .tag {
+    @apply inline-block px-2 py-0.5 text-xs border border-foreground/20 rounded-none;
+    transition: all 0.15s ease-out;
+  }
+
+  .tag:hover {
+    @apply bg-foreground text-background;
+  }
+
+  /* Glass panel */
+  .glass-panel {
+    @apply bg-glass/70 backdrop-blur-md;
+    transition: transform 0.3s ease-out;
+  }
+
+  .glass-panel:hover {
+    transform: translate(-1px, -1px);
+  }
+
+  /* Print misalignment effect on headings */
+  .print-offset {
+    text-shadow: 
+      0.5px 0.5px 0 hsl(var(--primary) / 0.15),
+      -0.3px 0.3px 0 hsl(200 60% 60% / 0.08);
+  }
+}
+
+@layer utilities {
+  /* Sun breathing animation */
+  @keyframes sun-breathe {
+    0%, 100% {
+      filter: blur(60px);
+      opacity: 0.9;
+      transform: scale(1);
+    }
+    50% {
+      filter: blur(80px);
+      opacity: 0.75;
+      transform: scale(1.02);
+    }
+  }
+
+  @keyframes sun-core-pulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.95;
+      transform: scale(0.98);
+    }
+  }
+
+  .animate-sun-breathe {
+    animation: sun-breathe 8s ease-in-out infinite;
+  }
+
+  .animate-sun-core {
+    animation: sun-core-pulse 8s ease-in-out infinite;
+  }
+
+  /* Fade in animations */
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animation-delay-100 { animation-delay: 0.1s; }
+  .animation-delay-200 { animation-delay: 0.2s; }
+  .animation-delay-300 { animation-delay: 0.3s; }
+  .animation-delay-400 { animation-delay: 0.4s; }
+  .animation-delay-500 { animation-delay: 0.5s; }
+  .animation-delay-600 { animation-delay: 0.6s; }
+  .animation-delay-700 { animation-delay: 0.7s; }
 }
