@@ -54,7 +54,7 @@ export default {
         glass: "hsl(var(--glass))",
       },
       fontFamily: {
-        grotesk: ['"Martian Mono"', 'monospace'],
+        grotesk: ['"Martian Grotesk"', 'sans-serif'],
         mono: ['"Martian Mono"', 'monospace'],
       },
       fontSize: {
