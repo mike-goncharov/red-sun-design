@@ -49,10 +49,10 @@ const Index = () => {
           
           {/* Hero */}
           <header className="animate-fade-up">
-            <h1 className="text-display print-offset mb-2">
+            <h1 className="font-grotesk text-display print-offset mb-2">
               Mike Goncharov
             </h1>
-            <p className="text-title text-muted-foreground mb-4">
+            <p className="font-grotesk text-title text-muted-foreground mb-4">
               Senior Product & UX Designer
             </p>
             <div className="space-y-1 text-body text-muted-foreground max-w-[380px]">
@@ -66,7 +66,7 @@ const Index = () => {
             
             {/* What I do */}
             <section>
-              <h2 className="section-title text-section font-semibold mb-2 uppercase tracking-wider">What I do</h2>
+              <h2 className="font-grotesk section-title text-section font-semibold mb-2 uppercase tracking-wider">What I do</h2>
               <ul className="space-y-0.5 text-body text-muted-foreground">
                 <li>Product & UX design for web apps, tools and internal systems</li>
                 <li>Translating between business, design and engineering</li>
@@ -79,7 +79,7 @@ const Index = () => {
 
             {/* Best fit for */}
             <section>
-              <h2 className="section-title text-section font-semibold mb-2 uppercase tracking-wider">Best fit for</h2>
+              <h2 className="font-grotesk section-title text-section font-semibold mb-2 uppercase tracking-wider">Best fit for</h2>
               <ul className="space-y-0.5 text-body text-muted-foreground">
                 <li>B2B / SaaS tools, dashboards and internal systems</li>
                 <li>Early-stage products that need structure, clarity and realistic scope</li>
@@ -91,7 +91,7 @@ const Index = () => {
 
             {/* Not the right match */}
             <section>
-              <h2 className="section-title text-section font-semibold mb-2 uppercase tracking-wider">Not the right match if you need</h2>
+              <h2 className="font-grotesk section-title text-section font-semibold mb-2 uppercase tracking-wider">Not the right match if you need</h2>
               <ul className="space-y-0.5 text-body text-muted-foreground">
                 <li>Pure visual / marketing-only design without product thinking</li>
                 <li>Heavy motion design and complex micro-animations as a core focus</li>
@@ -134,7 +134,7 @@ const Index = () => {
             
             {/* How I work */}
             <section>
-              <h2 className="section-title text-section font-semibold mb-2 uppercase tracking-wider">How I work</h2>
+              <h2 className="font-grotesk section-title text-section font-semibold mb-2 uppercase tracking-wider">How I work</h2>
               <ul className="space-y-0.5 text-body text-muted-foreground">
                 <li>Start from the real problem, not from the Dribbble shot</li>
                 <li>Prefer small, testable iterations over big-bang redesigns</li>
@@ -148,7 +148,7 @@ const Index = () => {
 
             {/* Past ventures */}
             <section>
-              <h2 className="section-title text-section font-semibold mb-2 uppercase tracking-wider">Past ventures</h2>
+              <h2 className="font-grotesk section-title text-section font-semibold mb-2 uppercase tracking-wider">Past ventures</h2>
               <ul className="space-y-0.5 text-body text-muted-foreground">
                 <li>Launched a furniture startup — shut down, but taught me about operations, pricing and risk</li>
                 <li>Co-created an online apparel brand (design, production, ecommerce) — later handed over to a partner</li>
@@ -157,7 +157,7 @@ const Index = () => {
 
             {/* Currently open to */}
             <section>
-              <h2 className="section-title text-section font-semibold mb-2 uppercase tracking-wider">Currently open to</h2>
+              <h2 className="font-grotesk section-title text-section font-semibold mb-2 uppercase tracking-wider">Currently open to</h2>
               <ul className="space-y-0.5 text-body text-muted-foreground">
                 <li>Senior IC Product / UX roles (not primarily people-management)</li>
                 <li>Contract / freelance work on meaningful, long-term products</li>
