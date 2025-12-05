@@ -20,7 +20,7 @@ const Index = () => {
   return (
     <main 
       ref={containerRef}
-      className="relative w-full min-h-screen lg:h-screen lg:max-h-screen overflow-x-hidden lg:overflow-hidden bg-background"
+      className="relative w-full min-h-screen lg:overflow-hidden bg-background"
     >
       {/* Red Sun - Core */}
       <div 
